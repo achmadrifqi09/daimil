@@ -104,28 +104,32 @@ function removeItem(el, productId) {
 function order() {
     if (Array.isArray(product) && product.length) {
 
-        let btnOrder = document.getElementById('checkout');
-        for (let i = 0; i < product.length; i++) {
-            message += "- " + product[i] + " [" + "Jumlah :" + piecesArr[i] + ", " + "Varian rasa :" + flavour[i] + "]" + "%0A"
-        }
-        let priceResult = 0;
-        for (let x = 0; x < priceArr.length; x++) {
-            priceResult += priceArr[x];
-        }
 
+        let btnOrder = document.getElementById('checkout');
         let getSelectedValue = document.querySelector(
             'input[name="ewallet"]:checked');
-        let payment = getSelectedValue.value;
+
         let address = document.getElementById('address').value;
 
-        if (payment != null && address != '') {
-            console.log(address);
-            message = message + "%0ATotal harga : " + priceResult + "%0A" + "Alamat pengiriman : " + address + "%0AMetode Pembayaran : " + payment;
-            btnOrder.href = message;
-        } else if (payment == null) {
-            alert('Harap masukkan metode pembayaran yang sesuai.')
+
+        if (getSelectedValue == null && address == '') {
+            alert('Harap masukkan alamat dan metode pembayaran yang sesuai.')
         } else if (address == '') {
             alert('Harap masukkan alamat yang sesuai.')
+        } else if (getSelectedValue == null) {
+            alert('Harap masukkan metode pembayaran yang sesuai.')
+        } else if (payment != null && address != '') {
+
+            let payment = getSelectedValue.value;
+            for (let i = 0; i < product.length; i++) {
+                message += "- " + product[i] + " [" + "Jumlah :" + piecesArr[i] + ", " + "Varian rasa :" + flavour[i] + "]" + "%0A"
+            }
+            let priceResult = 0;
+            for (let x = 0; x < priceArr.length; x++) {
+                priceResult += priceArr[x];
+            }
+            message = message + "%0ATotal harga : " + priceResult + "%0A" + "Alamat pengiriman : " + address + "%0AMetode Pembayaran : " + payment;
+            btnOrder.href = message;
         }
 
 

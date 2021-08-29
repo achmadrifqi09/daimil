@@ -539,14 +539,7 @@ li {
         width: 25%;
     }
 
-    .jumbotron::before {
-        content: ' ';
-        background-image: url(assets/flower.png);
-        position: absolute;
-        left: 100px;
-        top: 100px;
-        bottom: 0px;
-    }
+
 
     .jumbotron {
         padding: 24px 24px;
