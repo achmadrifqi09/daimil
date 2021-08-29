@@ -8,45 +8,56 @@
     <title>Daimil Snack</title>
     <link rel="stylesheet" href="about-us.css">
     <link rel="icon" href="assets/DAIMIL PNG.png">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body id="about-us">
 
     <nav class="nav">
         <div class="brand">
-            <a href="index.html"><img src="assets/daimil red.png" alt="logo" width="80px"></a>
+            <a href="index.html"><img src="assets/daimil red.png" alt="logo" width="100px"></a>
         </div>
         <ul class="navbar-nav">
             <li class="nav-item"><a href="index.html">Beranda</a></li>
             <li class="nav-item"><a href="index.html#products">Produk</a></li>
             <li class="nav-item"><a href="about-us.html">Tentang Kami</a></li>
         </ul>
-        <div class="toggle-menu">
-            <input type="checkbox">
-            <span></span>
-            <span></span>
-            <span></span>
+        <div class="wrap-icon">
+            <a href="cart.html">
+                <div class="wrap-cart">
+                    <span class="badge"></span>
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+            </a>
+            <div class="toggle-menu">
+                <input type="checkbox">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
 
     <div class="jumbotron">
-        <div class="jumbotron-brand">
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur rem, temporibus itaque
-                accusantium deleniti earum quo suscipit consequatur tempora, veniam voluptate deserunt beatae
-                eius impedit incidunt harum id dolorem fuga obcaecati similique voluptates magnam! Minima
-                consectetur nobis sed odit, corrupti in vitae repudiandae. Perspiciatis quidem consectetur
-                Praesentium, ipsum? Dolorum vel incidunt consequuntur tempora fugit officia, libero minus.
+        <div class="jumbotron-brand" data-aos="fade-right" data-aos-duration="1500">
+            <h3>Tentang Kami</h3>
+            <p class="p1">
+                Daimil merupakan brand makanan ringan asal Malang yang berdiri pada tahun 2021. Kami memiliki berbagi
+                macam produk makanan ringan yang cocok untuk menemani segala aktivitas anda dengan varian rasa manis,
+                original, dan pedas yang sesuai dengan lidah masyarakat Indonesia. Daimil didirikan oleh 2 orang remaja
+                dengan harapakan dapat memuaskan dan memudahkan masyarakat Indonesia dalam mendapatkan makanan ringan
+                dari berbagai daerah.
             </p>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nulla odio, sapiente
-                exercitationem porro eligendi quasi dolor ducimus delectus. Nisi, perspiciatis asperiores nam
-                architecto atque voluptatibus eos modi, maxime ullam dignissimos tenetur facilis et nulla
-                necessitatibus neque blanditiis! Deleniti recusandae sint mollitia, numquam vitae dicta nisi ut
-                itaque sapiente cumque.
+            <p class="p2">
+                Daimil berasal dari gabungan kata italia dan Indonesia yaitu Dai dan Mil. Dai berasal dari Bahasa italia
+                yang artinya ayo, dan mil yang merupakan singkatan dari kata nyemil. Daimil bertujuan untuk mengenalkan
+                kepada masyarakat Indonesia khususnya para generasi muda bahwa makanana riangan khas Indonesia tak kalah
+                enaknya dengan makanan ringan yang berasal dari luar negeri. Dengan sajian kemasan yang kekinian dan
+                proses pemesanan yang mudah, daimil berharap makanan ringan khas Indonesia dapat dinikmati oleh seluruh
+                masyarakat Indonesia dari sabang sampai Merauke.
             </p>
         </div>
-        <div class="jumbotron-logo">
+        <div class="jumbotron-logo" data-aos="fade-left" data-aos-duration="2000">
             <img src="assets/DAIMIL PNG.png" alt="Logo" id="header-img">
         </div>
     </div>
@@ -66,8 +77,14 @@
             Copyright © Daimil Snack 2021
         </p>
     </footer>
-
+    <script src="https://kit.fontawesome.com/92dd50d270.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+        });
+    </script>
 </body>
 
 </html>

@@ -20,6 +20,7 @@
             <ul class="navbar-nav">
                 <li class="nav-item"><a href="#home">Beranda</a></li>
                 <li class="nav-item"><a href="#products">Produk</a></li>
+                <li class="nav-item"><a href="#cart">Keranjang</a></li>
                 <li class="nav-item"><a href="about-us.html">Tentang Kami</a></li>
             </ul>
             <div class="toggle-menu">
@@ -33,15 +34,17 @@
         <div class="container">
             <div class="jumbotron">
                 <div class="jumbotron-brand" data-aos="fade-right" data-aos-duration="1500">
-                    <h1 class="jumbotron-title">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore,
-                        explicabo.</h1>
-                    <p class="jumbotron-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
-                        explicabo, quis porro quam voluptatum quos reiciendis tenetur tempora dolor corporis!</p>
-                    <button class="btn-order"><a href="https://api.whatsapp.com/send?phone=6285259331486">Pesan
+                    <h1 class="jumbotron-title" data-depth="0.2">Dapatkan Camilan Terbaikmu Sekarang Dan Temukan
+                        Sensasinya di Setiap Gigitan</h1>
+                    <p class="jumbotron-desc" data-depth="0.6">Temukan dan rasakan makanan ringan yang sesuai dengan
+                        selera anda di Daimil. Daimil menyediakan makanan ringan dengan berbagai cita rasa makanan,
+                        mulai dari rasa pedas, asin gurih, hingga manis. Tentu dengan harga yang pas dikantong, kami
+                        siap mengirim pesanan anda ke semua daerah di Indonesia</p>
+                    <button class="btn-order"><a href="#products">Pesan
                             Sekarang</a></button>
                 </div>
-                <div class="jumbotron-product" data-aos="fade-left" data-aos-duration="2000">
-                    <img src="assets/hero img.png" alt="Basreng" id="header-img">
+                <div class="jumbotron-product" data-aos="fade-left" data-aos-duration="2000" data-depth="0.9">
+                    <img src="assets/hero-image.png" alt="Basreng" id="header-img">
                 </div>
             </div>
         </div>
@@ -51,77 +54,330 @@
         <h2 class="title">Produk Makanan Ringan</h2>
         <div class="wrap-grid">
             <div class="grid-item" data-aos="fade-up" data-aos-duration="600">
-                <img src="assets/hero img.png" alt="product">
-                <h3 class="card-title">Lorem Ipsum</h3>
-                <p class="card-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, eum!</p>
-                <p class="price">Rp 15.000/pcs</p>
+                <div class="product-item">
+                    <img src="assets/hero img.png" alt="product">
+                    <h3 class="card-title">Cincin Udang</h3>
+                    <p class="card-desc">Cincin udang pedas terbuat dari sari udang pilihan dan tepung sagu. Cincin
+                        udang
+                        disajikan dengan 2 rasa bumbu yaitu pedas dan asin.</p>
+                    <p class="price">Rp 15.000/pcs</p>
+                </div>
+                <div class="container-input">
+                    <label for="d1">Tambah keterangan (varian rasa)
+                        <input type="text" class="desc-input" placeholder="Tambah keterangan" id="d1">
+                    </label>
+                    <div class="wrap-input">
+                        <div class="total">
+                            <input type="number" id="t1" class="pieces-input" placeholder="0">
+                            <p>/PCS</p>
+                        </div>
+                        <button class="btn-add-cart" id="pro1"
+                            onclick="addCart('t1', 'd1', 'pro1', 'cincin udang', 15000, this.id)">Masukkan
+                            Keranjang</button>
+                    </div>
+                </div>
             </div>
             <div class="grid-item" data-aos="fade-up" data-aos-duration="700">
-                <img src="assets/hero img.png" alt="">
-                <h3 class="card-title">Lorem Ipsum</h3>
-                <p class="card-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, eum!</p>
-                <p class="price">Rp 15.000/pcs</p>
+                <div class="product-item">
+                    <img src="assets/hero img.png" alt="product">
+                    <h3 class="card-title">Usus Krispi</h3>
+                    <p class="card-desc">Usus krispi merupakan olahan usus ayam menjadi keripik. Dengan menggunakan
+                        bahan baku usus ayam pilihan yang berkualitas serta dibumbu menggunakan rempah-rempah alami khas
+                        Indonesia menghasilkan keripik usus ayam yang gurih, renyah dan lezat. Usus kripsi disajikan
+                        dengan 2 rasa bumbu yaitu pedas dan original.</p>
+                    <p class="price">Rp 15.000/pcs</p>
+                </div>
+                <div class="container-input">
+                    <label for="d2">Tambah keterangan (varian rasa)
+                        <input type="text" class="desc-input" placeholder="Tambah keterangan" id="d2">
+                    </label>
+                    <div class="wrap-input">
+                        <div class="total">
+                            <input type="number" id="t2" class="pieces-input" placeholder="0">
+                            <p>/PCS</p>
+                        </div>
+                        <button class="btn-add-cart" id="pro2"
+                            onclick="addCart('t2', 'd2', 'pro2','usus krispi', 15000, this.id)">Masukkan
+                            Keranjang</button>
+                    </div>
+                </div>
             </div>
             <div class="grid-item" data-aos="fade-up" data-aos-duration="800">
-                <img src="assets/hero img.png" alt="">
-                <h3 class="card-title">Lorem Ipsum</h3>
-                <p class="card-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, eum!</p>
-                <p class="price">Rp 15.000/pcs</p>
+                <div class="product-item">
+                    <img src="assets/basreng ori.png" alt="product">
+                    <h3 class="card-title">Bakso Goreng(basreng)</h3>
+                    <p class="card-desc">Bakso goreng atau lebih dikenal dengan sebutan basreng, menggunakan bahan dasar
+                        ikan pilihan berkualitasdengan rasa yang gurih, renyah dan tidka keras. Kami menghadirkan 2
+                        pilihan bentuk basreng yaitu basreng stik dan keripik basreng dengan 4 varian rasa yaitu
+                        original, asin jeruk, pedas dan pedas jeruk.</p>
+                    <p class="price">Rp 15.000/pcs</p>
+                </div>
+                <div class="container-input">
+                    <label for="d3">Tambah keterangan (varian rasa)
+                        <input type="text" class="desc-input" placeholder="Tambah keterangan" id="d3">
+                    </label>
+                    <div class="wrap-input">
+                        <div class="total">
+                            <input type="number" id="t3" class="pieces-input" placeholder="0">
+                            <p>/PCS</p>
+                        </div>
+                        <button class="btn-add-cart" id="pro3"
+                            onclick="addCart('t3', 'd3','pro3', 'basreng', 15000, this.id)">Masukkan
+                            Keranjang</button>
+                    </div>
+                </div>
             </div>
             <div class="grid-item" data-aos="fade-up" data-aos-duration="900">
-                <img src="assets/hero img.png" alt="">
-                <h3 class="card-title">Lorem Ipsum</h3>
-                <p class="card-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, eum!</p>
-                <p class="price">Rp 15.000/pcs</p>
+                <div class="product-item">
+                    <img src="assets/comring.png" alt="product">
+                    <h3 class="card-title">Combro Kering(Comring)</h3>
+                    <p class="card-desc">Combro kering atau yang dikenal dengan comring adalah camilan berbahan dasar
+                        singkong dan di bumbu menggunkaan rempah rempah alami. Comring disajikan dengan 2 rasa bumbu
+                        yaitu pedas dan original.</p>
+                    <p class="price">Rp 15.000/pcs</p>
+                </div>
+                <div class="container-input">
+                    <label for="d4">Tambah keterangan (varian rasa)
+                        <input type="text" class="desc-input" placeholder="Tambah keterangan" id="d4">
+                    </label>
+                    <div class="wrap-input">
+                        <div class="total">
+                            <input type="number" id="t4" class="pieces-input" placeholder="0">
+                            <p>/PCS</p>
+                        </div>
+                        <button class="btn-add-cart" id="pro4"
+                            onclick="addCart('t4', 'd4', 'pro4','comring', 15000, this.id)">Masukkan
+                            Keranjang</button>
+                    </div>
+                </div>
             </div>
             <div class="grid-item" data-aos="fade-up" data-aos-duration="1000">
-                <img src="assets/hero img.png" alt="">
-                <h3 class="card-title">Lorem Ipsum</h3>
-                <p class="card-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, eum!</p>
-                <p class="price">Rp 15.000/pcs</p>
+                <div class="product-item">
+                    <img src="assets/hero img.png" alt="product">
+                    <h3 class="card-title">Kulit Krispi</h3>
+                    <p class="card-desc">Kulit krispi merupakan olahan dari kulit ayam menjadi keripik. Dengan
+                        menggunakan bahan baku kulit ayam pilihan yang berkualitas serta dibumbu menggunakan
+                        rempah-rempah alami khas Indonesia menghasilkan keripik usus ayam yang gurih, renyah dan lezat.
+                        Kulit kripsi disajikan dengan 2 rasa bumbu yaitu pedas dan original.</p>
+                    <p class="price">Rp 15.000/pcs</p>
+                </div>
+                <div class="container-input">
+                    <label for="d5">Tambah keterangan (varian rasa)
+                        <input type="text" class="desc-input" placeholder="Tambah keterangan" id="d5">
+                    </label>
+                    <div class="wrap-input">
+                        <div class="total">
+                            <input type="number" id="t5" class="pieces-input" placeholder="0">
+                            <p>/PCS</p>
+                        </div>
+                        <button class="btn-add-cart" id="pro5"
+                            onclick="addCart('t5', 'd5','pro5', 'kulit krispi', 15000, this.id)">Masukkan
+                            Keranjang</button>
+                    </div>
+                </div>
             </div>
             <div class="grid-item" data-aos="fade-up" data-aos-duration="1100">
-                <img src="assets/hero img.png" alt="">
-                <h3 class="card-title">Lorem Ipsum</h3>
-                <p class="card-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, eum!</p>
-                <p class="price">Rp 15.000/pcs</p>
+                <div class="product-item">
+                    <img src="assets/hero img.png" alt="product">
+                    <h3 class="card-title">Keripik Setan</h3>
+                    <p class="card-desc">Keripik setan terbuat dari singkong yang diiris tipis sehingga saat digigit
+                        sangat renyah, terbuat dari singkong pilihan dan dibumbu menggunakan rempah alami khas
+                        Indonesia. Tersedia 2 rasa bumbu yaitu pedas dan original (asin).</p>
+                    <p class="price">Rp 15.000/pcs</p>
+                </div>
+                <div class="container-input">
+                    <label for="d6">Tambah keterangan (varian rasa)
+                        <input type="text" class="desc-input" placeholder="Tambah keterangan" id="d6">
+                    </label>
+                    <div class="wrap-input">
+                        <div class="total">
+                            <input type="number" id="t6" class="pieces-input" placeholder="0">
+                            <p>/PCS</p>
+                        </div>
+                        <button class="btn-add-cart" id="pro6"
+                            onclick="addCart('t6','d6', 'pro6','keripik setan', 15000, this.id)">Masukkan
+                            Keranjang</button>
+                    </div>
+                </div>
             </div>
             <div class="grid-item" data-aos="fade-up" data-aos-duration="1200">
-                <img src="assets/hero img.png" alt="">
-                <h3 class="card-title">Lorem Ipsum</h3>
-                <p class="card-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, eum!</p>
-                <p class="price">Rp 15.000/pcs</p>
+                <div class="product-item">
+                    <img src="assets/kelereng.png" alt="product">
+                    <h3 class="card-title">Snack Kelereng</h3>
+                    <p class="card-desc">Semacam dengan comro dan guik yang juga berbahan dasar singkong, dengan bentuk
+                        bulat menyerupai kelereng dan sama sama digoreng. Snack kelereng disajikan dengan 2 rasaa bumbu
+                        yaitu pedas dan original (asin).</p>
+                    <p class="price">Rp 15.000/pcs</p>
+                </div>
+                <div class="container-input">
+                    <label for="d7">Tambah keterangan (varian rasa)
+                        <input type="text" class="desc-input" placeholder="Tambah keterangan" id="d7">
+                    </label>
+                    <div class="wrap-input">
+                        <div class="total">
+                            <input type="number" id="t7" class="pieces-input" placeholder="0">
+                            <p>/PCS</p>
+                        </div>
+                        <button class="btn-add-cart" id="pro7"
+                            onclick="addCart('t7','d7', 'pro7','snack kelereng', 15000, this.id)">Masukkan
+                            Keranjang</button>
+                    </div>
+                </div>
             </div>
             <div class="grid-item" data-aos="fade-up" data-aos-duration="1300">
-                <img src="assets/hero img.png" alt="">
-                <h3 class="card-title">Lorem Ipsum</h3>
-                <p class="card-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, eum!</p>
-                <p class="price">Rp 15.000/pcs</p>
+                <div class="product-item">
+                    <img src="assets/hero img.png" alt="product">
+                    <h3 class="card-title">Keripik Kaca</h3>
+                    <p class="card-desc">Keripik kaca atau kripca terbuat dari singkong berkualitas pilihan yang
+                        digiling lalu dioven dengan bumbu pilihan terdapat sensasi kencur dan daun jeruk. Keripik kaca
+                        disajikan dengan 4 varian rasa yaitu pedas cabai merah, extra pedas cabai merah, pedas cabai
+                        hijau dan rasa original.</p>
+                    <p class="price">Rp 15.000/pcs</p>
+                </div>
+                <div class="container-input">
+                    <label for="d8">Tambah keterangan (varian rasa)
+                        <input type="text" class="desc-input" placeholder="Tambah keterangan" id="d8">
+                    </label>
+                    <div class="wrap-input">
+                        <div class="total">
+                            <input type="number" id="t8" class="pieces-input" placeholder="0">
+                            <p>/PCS</p>
+                        </div>
+                        <button class="btn-add-cart" id="pro8"
+                            onclick="addCart('t8', 'd8', 'pro8', 'keripca', 15000, this.id)">Masukkan
+                            Keranjang</button>
+                    </div>
+                </div>
             </div>
             <div class="grid-item" data-aos="fade-up" data-aos-duration="1400">
-                <img src="assets/hero img.png" alt="">
-                <h3 class="card-title">Lorem Ipsum</h3>
-                <p class="card-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, eum!</p>
-                <p class="price">Rp 15.000/pcs</p>
+                <div class="product-item">
+                    <img src="assets/hero img.png" alt="product">
+                    <h3 class="card-title">Keripik Elod Pedas</h3>
+                    <p class="card-desc">Keripik elod merupakan keripik berbahan dasar tepung tapioka dengan tekstur
+                        keripik menyerupai keripik kaca. Disajikan dengan rasa pedas yang bikin nagih.</p>
+                    <p class="price">Rp 15.000/pcs</p>
+                </div>
+                <div class="container-input">
+                    <label for="d9">Tambah keterangan (varian rasa)
+                        <input type="text" class="desc-input" placeholder="Tambah keterangan" id="d9">
+                    </label>
+                    <div class="wrap-input">
+                        <div class="total">
+                            <input type="number" id="t9" class="pieces-input" placeholder="0">
+                            <p>/PCS</p>
+                        </div>
+                        <button class="btn-add-cart" id="pro9"
+                            onclick="addCart('t9', 'd9','pro9', 'keripik elod', 15000, this.id)">Masukkan
+                            Keranjang</button>
+                    </div>
+                </div>
             </div>
             <div class="grid-item" data-aos="fade-up" data-aos-duration="1500">
-                <img src="assets/hero img.png" alt="">
-                <h3 class="card-title">Lorem Ipsum</h3>
-                <p class="card-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, eum!</p>
-                <p class="price">Rp 15.000/pcs</p>
+                <div class="product-item">
+                    <img src="assets/hero img.png" alt="product">
+                    <h3 class="card-title">Kerupuk Bantat Pedas</h3>
+                    <p class="card-desc">Kerupuk bantat merupakan seblak kering versi bantat. Kerupuk bantat dengan
+                        bumbu basah dari rempah pilihan dan cabai asli. Disajikan dengan rasa pedas yang bikin nagih</p>
+                    <p class="price">Rp 15.000/pcs</p>
+                </div>
+                <div class="container-input">
+                    <label for="d10">Tambah keterangan (varian rasa)
+                        <input type="text" class="desc-input" placeholder="Tambah keterangan" id="d10">
+                    </label>
+                    <div class="wrap-input">
+                        <div class="total">
+                            <input type="number" id="t10" class="pieces-input" placeholder="0">
+                            <p>/PCS</p>
+                        </div>
+                        <button class="btn-add-cart" id="pro10"
+                            onclick="addCart('t10', 'd10',  'pro10', 'kerupuk bantat', 15000, this.id)">Masukkan
+                            Keranjang</button>
+                    </div>
+                </div>
             </div>
             <div class="grid-item" data-aos="fade-up" data-aos-duration="1600">
-                <img src="assets/hero img.png" alt="">
-                <h3 class="card-title">Lorem Ipsum</h3>
-                <p class="card-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, eum!</p>
-                <p class="price">Rp 15.000/pcs</p>
+                <div class="product-item">
+                    <img src="assets/hero img.png" alt="product">
+                    <h3 class="card-title">Siomay</h3>
+                    <p class="card-desc">Siomay pedas adalah siomay versi kering yang terbuat dari bahan bahan pilihan
+                        dan dibalut dengan rempah alami khas masakan jawa barat. Tersedia dengan 2 varian rasa yaitu
+                        pedas dan original (asin).</p>
+                    <p class="price">Rp 15.000/pcs</p>
+                </div>
+                <div class="container-input">
+                    <label for="d11">Tambah keterangan (varian rasa)
+                        <input type="text" class="desc-input" placeholder="Tambah keterangan" id="d11">
+                    </label>
+                    <div class="wrap-input">
+                        <div class="total">
+                            <input type="number" id="t11" class="pieces-input" placeholder="0">
+                            <p>/PCS</p>
+                        </div>
+                        <button class="btn-add-cart" id="pro11"
+                            onclick="addCart('t11','d11', 'pro11', 'siomay', 15000, this.id)">Masukkan
+                            Keranjang</button>
+                    </div>
+                </div>
             </div>
             <div class="grid-item" data-aos="fade-up" data-aos-duration="1700">
-                <img src="assets/hero img.png" alt="">
-                <h3 class="card-title">Lorem Ipsum</h3>
-                <p class="card-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, eum!</p>
-                <p class="price">Rp 15.000/pcs</p>
+                <div class="product-item">
+                    <img src="assets/hero img.png" alt="product">
+                    <h3 class="card-title">Soes Cokelat</h3>
+                    <p class="card-desc">Soes cokelat adalah soes kering mini dengan filling krim coklat. Terbuat dengan
+                        bahan bahan berkualitas pilihan dengan kulit soes yang krispi dan renyah dan isinya yang lumer
+                        dan manis akan membuat ketagihan. </p>
+                    <p class="price">Rp 15.000/pcs</p>
+                </div>
+                <div class="cotainer-input">
+                    <label for="d12">Tambah keterangan (varian rasa)
+                        <input type="text" class="desc-input" placeholder="Tambah keterangan" id="d12">
+                    </label>
+                    <div class="wrap-input">
+                        <div class="total">
+                            <input type="number" id="t12" class="pieces-input" placeholder="0">
+                            <p>/PCS</p>
+                        </div>
+                        <button class="btn-add-cart" id="pro12"
+                            onclick="addCart('t12', 'd12', 'pro12','soes cokelat', 15000, this.id)">Masukkan
+                            Keranjang</button>
+                    </div>
+                </div>
             </div>
+        </div>
+    </div>
+
+
+    <div class="container-cart" id="cart">
+        <h2 class="title">Keranjang</h2>
+        <ul class="cart-list" id="cart-list">
+            <li class="no-item" id="no-item">
+                <p>Keranjang anda kosong</p>
+            </li>
+        </ul>
+        <div class="wrap-order">
+            <div class="order-attribute" id="order-attribute">
+                <label for="address" id="labelAddress">
+                    Alamat Pengiriman
+                    <textarea name="address" id="address" cols="30" rows="10"
+                        placeholder="Masukkan alamat pengiriman"></textarea>
+                </label>
+                <label for="payment" id="labelPayment">
+                    Metode Pembayaran
+                    <div class="payment" id="payment">
+                        <input type="radio" id="bca" name="ewallet" value="BCA - 4451796016 A.n Neilla Eka Putri H">
+                        <label for="bca" class="payment-method bca"></label>
+                        <input type="radio" id="bri" name="ewallet"
+                            value="BRI - 632001019406534 A.n Neilla Eka Putri H">
+                        <label for="bri" class="payment-method bri"></label>
+                        <input type="radio" id="shopee_pay" name="ewallet"
+                            value="ShopeePay - 085259331486 A.n neillaeka">
+                        <label for="shopee_pay" class="payment-method shopee_pay"></label>
+                        <input type="radio" id="gopay" name="ewallet" value="GoPay - 085259331486 A.n Neilla Eka">
+                        <label for="gopay" class="payment-method gopay"></label>
+                    </div>
+                </label>
+            </div>
+            <a href="#cart" id="checkout"><button class="btn-order" onclick="order()">Checkout</button></a>
         </div>
     </div>
     <a href="https://api.whatsapp.com/send?phone=6285259331486" class="floating-btn"><i
