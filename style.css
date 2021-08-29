@@ -525,6 +525,7 @@ li {
         flex-direction: column;
         position: absolute;
         top: 50px;
+        height: 45vh;
         left: -150vw;
         padding: 34px 24px;
         background-color: var(--bg-color);
