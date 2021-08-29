@@ -81,17 +81,7 @@ body {
     border-radius: 2px;
 }
 
-.wrap-icon {
-    display: flex;
 
-    justify-content: space-between;
-    box-sizing: border-box;
-}
-
-
-.wrap-cart i:hover {
-    color: var(--second-color);
-}
 
 .toggle-menu input {
     position: absolute;
