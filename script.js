@@ -130,6 +130,7 @@ function order() {
             }
             message = message + "%0ATotal harga : " + priceResult + "%0A" + "Alamat pengiriman : " + address + "%0AMetode Pembayaran : " + payment;
             btnOrder.href = message;
+            setTimeout(reloadPage, 5000)
         }
 
 
@@ -141,4 +142,8 @@ function order() {
             btnOrder.href = "#products";
         }
     }
+}
+
+function reloadPage() {
+    location.reload();
 }
