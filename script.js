@@ -122,8 +122,10 @@ function order() {
             console.log(address);
             message = message + "%0ATotal harga : " + priceResult + "%0A" + "Alamat pengiriman : " + address + "%0AMetode Pembayaran : " + payment;
             btnOrder.href = message;
-        } else {
-            alert('Harap formulis order dengan baik.')
+        } else if (payment == null) {
+            alert('Harap masukkan metode pembayaran yang sesuai.')
+        } else if (address == '') {
+            alert('Harap masukkan alamat yang sesuai.')
         }
 
 
