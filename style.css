@@ -81,7 +81,27 @@ body {
     border-radius: 2px;
 }
 
+.badge-ready::after {
+    content: "Ready";
+    font-size: 14px;
+    position: absolute;
+    display: block;
+    padding: 5px 10px;
+    background-color: var(--main-color);
+    border-radius: 50px;
+    color: white;
+}
 
+.badge-sold::after {
+    content: "Sold Out";
+    position: absolute;
+    font-size: 14px;
+    display: block;
+    padding: 5px 10px;
+    background-color: var(--second-color);
+    border-radius: 50px;
+    color: white;
+}
 
 .toggle-menu input {
     position: absolute;
