@@ -7,7 +7,7 @@ toggleMenu.addEventListener('click', function () {
 
 
 
-let message = 'https://wa.me/6285259331486?text=Permisi%20min%20saya%20mau%20pesan:%0A'
+let message = 'https://wa.me/6282233439515?text=Permisi%20min%20saya%20mau%20pesan:%0A'
 let product = [];
 let priceArr = [];
 let flavour = [];
